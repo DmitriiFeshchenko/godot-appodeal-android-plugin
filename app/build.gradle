@@ -1,0 +1,43 @@
+plugins {
+    id 'com.android.library'
+}
+
+ext.libraryName = "Appodeal"
+ext.libraryVersionCode = 1
+ext.libraryVersionName = "1.0.0"
+
+android {
+    namespace 'com.dnhnd.godotappodeal'
+    compileSdk 32
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 32
+        versionCode libraryVersionCode
+        versionName libraryVersionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "$libraryName-$libraryVersionName-${variant.name}.aar"
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    compileOnly 'com.appodeal.ads:sdk:3.0.1.+'
+    compileOnly fileTree(dir:"libs", include:["godot-lib.3.5.1.stable.release.aar"])
+}
