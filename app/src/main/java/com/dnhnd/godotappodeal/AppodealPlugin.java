@@ -248,7 +248,7 @@ public class AppodealPlugin extends GodotPlugin {
 
     @UsedByGodot
     public String[] getNetworks(int adType) {
-        return Appodeal.getNetworks(godotActivity, getAndroidAdTypes(adType)).toArray(new String[0]);
+        return Appodeal.getNetworks(getAndroidAdTypes(adType)).toArray(new String[0]);
     }
 
     @UsedByGodot
@@ -359,11 +359,6 @@ public class AppodealPlugin extends GodotPlugin {
     @UsedByGodot
     public void muteVideosIfCallsMuted(boolean isMuted) {
         Appodeal.muteVideosIfCallsMuted(isMuted);
-    }
-
-    @UsedByGodot
-    public void disableWebViewCacheClear() {
-        Appodeal.disableWebViewCacheClear();
     }
 
     @UsedByGodot

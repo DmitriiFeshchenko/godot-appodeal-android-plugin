@@ -3,16 +3,16 @@ plugins {
 }
 
 ext.libraryName = "Appodeal"
-ext.libraryVersionCode = 1
-ext.libraryVersionName = "1.0.0"
+ext.libraryVersionCode = 2
+ext.libraryVersionName = "2.0.0"
 
 android {
     namespace 'com.dnhnd.godotappodeal'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode libraryVersionCode
         versionName libraryVersionName
     }
@@ -38,6 +38,6 @@ android {
 
 dependencies {
     implementation 'androidx.appcompat:appcompat:1.5.1'
-    compileOnly 'com.appodeal.ads:sdk:3.0.1.+'
+    compileOnly 'com.appodeal.ads:sdk:3.2.0.+'
     compileOnly fileTree(dir:"libs", include:["godot-lib.3.5.3.stable.release.aar"])
 }
