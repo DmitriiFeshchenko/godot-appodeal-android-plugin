@@ -1,6 +1,7 @@
 # Appodeal Android Plugin for Godot GameEngine
 
-This repository contains source code of Appodeal **Android** Plugin for Godot engine. **If you are looking for the Appodeal plugin itself, follow the first link below.**
+This repository contains source code of Appodeal **Android** Plugin for Godot engine.
+**If you are looking for the Appodeal plugin itself, follow the first link below.**
 
 ## Links:
 
